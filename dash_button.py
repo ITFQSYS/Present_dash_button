@@ -50,5 +50,5 @@ if __name__ == "__main__":
             now_time = datetime.datetime.now()
             if now_time - pre_time >= datetime.timedelta(seconds=downtime):
                 pre_time=now_time
-                requests.post(token, data=json.dumps({'text': u'只今調整中'}))
+                requests.post(token, data=json.dumps({'text': u'差し入れください'}))
                 write_log("Button pushed")
