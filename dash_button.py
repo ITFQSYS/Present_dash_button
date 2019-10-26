@@ -47,8 +47,8 @@ if __name__ == "__main__":
 
     while True:
         if button.is_pressed:
-            write_log("Button pushed")
             now_time = datetime.datetime.now()
             if now_time - pre_time >= datetime.timedelta(seconds=downtime):
                 pre_time=now_time
                 requests.post(token, data=json.dumps({'text': u'只今調整中'}))
+                write_log("Button pushed")
